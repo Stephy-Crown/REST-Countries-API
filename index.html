@@ -1,0 +1,61 @@
+<!DOCTYPE html >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Rest Countries API App</title>
+          <link href="dist/output.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"> -->
+      </head>
+          <body class="dark:bg-slate-900 bg-gray-100 font-Ubuntu dark:text-white ">
+            <main class="mx-auto max-w-xl dark:transition-all duration-500 ease-out">
+
+              <header class="flex  justify-between items-center shadow pt-[20px] px-[40px] pb-[20px] pl-[20px]  dark:bg-slate-700 bg-white">
+                <div>Where in the world?</div>
+                <div class="inline-flex gap-3">
+                  
+                    <svg class="moon cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
+                    </svg>
+                    <span>Dark Mode</span>
+                
+                </div>
+              </header>
+
+              <div class="md:flex md:justify-between px-[40px]  mt-[50px] ">
+                
+                <input type="text" placeholder="Search for a country..." id="search" class="dark:bg-slate-700 md:mb-0 mb-[50px] rounded pl-[30px] md:pr-[150px] py-[10px] bg-white border-none shadow">
+
+                  <!-- <select class="dark:bg-slate-700 pr-[50px] pl-[10px]" placeholder="Filter by region" id="regionlist">
+                    <option selected class="sr-only">Filter by region</option>
+                    <option value="africa">Africa</option>
+                    <option value="africa">America</option>
+                    <option value="africa">Asia</option>
+                    <option value="africa">Europe</option>
+                    <option value="africa">Oceania</option>
+                  </select> -->
+                  <div id="dropdownDefault" data-dropdown-toggle="dropdown" class="dark:text-white hover:bg-gray-200 focus:ring-4 focus:ring-gray-500 bg-white dark:bg-slate-600 rounded hover:cursor-pointer  py-[8px] shadow text-center inline-flex items-center px-[40px]" type="button"><span class="option-text">Filter by Region</span> <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                  </div>
+                  <div id="dropdown" class="hidden z-10 w-[220px] bg-white rounded divide-y divide-gray-100 shadow-2xl dark:bg-slate-700 font-Manrope">
+                    <ul class="py-1" aria-labelledby="dropdownDefault" id="options">
+                      <li class="block py-2 px-4 hover:bg-gray-200 dark:hover:bg-grayishBlue option"><span class="option-text">Africa</span></li>
+                      <li class="block py-2 px-4 hover:bg-gray-200 dark:hover:bg-grayishBlue option"><span class="option-text">America</span></li>
+                      <li  class="block py-2 px-4 hover:bg-gray-200 dark:hover:bg-grayishBlue option"><span class="option-text">Asia</span></li>
+                      <li  class="block py-2 px-4 hover:bg-gray-200 dark:hover:bg-grayishBlue option"><span class="option-text">Europe</span></li>
+                      <li class="block py-2 px-4 hover:bg-gray-200  dark:hover:bg-grayishBlue option"><span class="option-text">Oceania</span></li>
+                    </ul>
+
+                  </div>
+
+                </div>
+
+                <section id="section" class="md:grid md:grid-cols-4 md:gap-8 px-[40px] mt-[50px] dark:transition duration-500"></section>
+              </main>
+              <script src="/apps.js"></script>
+              <script src="/index.js"></script>
+
+              <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+            </body>
+          </head>
+        </html>
