@@ -1276,6 +1276,10 @@ input:checked + .toggle-bg{
   height: 100%;
 }
 
+.h-3{
+  height: 0.75rem;
+}
+
 .w-3{
   width: 0.75rem;
 }
@@ -1338,6 +1342,14 @@ input:checked + .toggle-bg{
 
 .w-\[310px\]{
   width: 310px;
+}
+
+.w-6{
+  width: 1.5rem;
+}
+
+.w-3\.5{
+  width: 0.875rem;
 }
 
 .max-w-xl{
@@ -1740,6 +1752,14 @@ input:checked + .toggle-bg{
 
 .pl-\[50px\]{
   padding-left: 50px;
+}
+
+.pl-\[5px\]{
+  padding-left: 5px;
+}
+
+.pl-\[2\.3px\]{
+  padding-left: 2.3px;
 }
 
 .text-center{
