@@ -29,10 +29,9 @@ searchBar.addEventListener("keyup", (e) => {
 
   // Get the value of the input by user and then store in a variable
   // console.log(e.target.value);
-  const searchString = e.target.value;
+  const searchString = e.target.value.toLowerCase();
 
   // convert all letters inputted by user to lowercase alphabets
-  searchString.toLowerCase();
 
   console.log(searchString);
 
@@ -62,18 +61,26 @@ const fetchCountries = async () => {
 
 const showCountries = (countries) => {
   // taking the list of countries(array of objs in this case map through ie for each country obj we will convert it to this htmlString template and render to th page)
-  const htmlString = countries
+
+  let htmlString = countries
     .map((country) => {
       return `
-    <div class="shadow-lg dark:bg-slate-700 bg-white rounded-lg h-[150px] mb-[50px] md:mb-[50px] dark:text-white">
+    <div class="shadow-lg dark:bg-slate-700 bg-white mb-[50px] md:mb-[50px] dark:text-white rounded-[10px]">
                 
-    <img src="${country.flags.png}" class='w-full h-full rounded-tl-[20px]'/>
-    
-      <h3 class='text-black'>${country.name.common}</h3>
-      <h4 class='text-gray-700'>Population:<span>${country.population}</span></h4>
-      <h4 class='text-gray-700'>Region:${country.region}</h4>
-      <h4>${country.capital}</h4>
-    
+    <img src="${country.flags.png}" class='md:w-[300px] w-full md:h-56 h-full rounded-t-[10px]'/>
+    <div class='pt-[20px] pl-[10px] '>
+      <h1 class="text-[20px] pb-[20px] font-bold">${country.name.common}</h1>
+      <p class='text-[15px] font-semibold'>Population:
+      <span class='pl-[2px] font-light'>${country.population}</span></p>
+
+      <p class='font-semibold'>Region:
+      <span class=' font-light pl-[2px]'>${country.region}</span>
+      </p>
+
+      <p class='pb-[80px] font-semibold'> Capital:
+      <span class='font-light pl-[2px]'>${country.capital}</span>
+      </p>
+</div>
   </div>
     `;
     })

@@ -9,16 +9,18 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html", "./node_modules/flowbite/**/*.js"],
+  content: ["index.html", "apps.js", "./node_modules/flowbite/**/*.js"],
   darkMode: "class",
   theme: {
     extend: {
       colors: {
-        darkBlue: "hsl(218, 23%, 16%)",
-        darkGrayishBlue: "hsl(217, 19%, 24%)",
-        grayishBlue: "hsl(217, 19%, 38%)",
-        lightCyan: "hsl(193, 38%, 86%)",
-        neonGreen: "hsl(150, 100%, 66%)",
+        darkModeElements: "hsl(209, 23%, 22%)",
+        darkModeBg: "hsl(207, 26%, 17%)",
+        lightModeText: "hsl(200, 15%, 8%)",
+        lightModeInput: "hsl(0, 0%, 52%)",
+        lightModeBg: "hsl(0, 0%, 98%)",
+        DarkModeTxt: "hsl(0, 0%, 100%)",
+        lightModeElements: "hsl(0, 0%, 100%)",
       },
 
       maxWidth: {
@@ -31,8 +33,8 @@ module.exports = {
       },
 
       fontFamily: {
-        Overpass: ["overpass"],
-        Ubuntu: ["ubuntu"],
+        Nunito: ["nunito"],
+        // Ubuntu: ["ubuntu"],
       },
     },
   },
