@@ -65,10 +65,10 @@ const showCountries = (countries) => {
   let htmlString = countries
     .map((country) => {
       return `
-    <div class="shadow-lg dark:bg-slate-700 mb-[50px] md:mb-[50px] dark:text-white rounded-[10px]">
+    <div class="shadow-lg dark:bg-darkModeElements mb-[50px] md:mb-[50px]  rounded-[10px]">
                 
     <img src="${country.flags.png}" class='w-full md:h-56 h-full rounded-t-[10px]'/>
-    <div class='pt-[20px] pl-[10px] '>
+    <div class='pt-[20px] pl-[10px] dark:bg-darkModeElements'>
       <h1 class="text-[20px] pb-[20px] font-bold">${country.name.common}</h1>
       <p class='text-[15px] font-semibold'>Population:
       <span class='pl-[2px] font-light'>${country.population}</span></p>
