@@ -89,8 +89,8 @@ const showCountries = (countries) => {
   let htmlString = countries
     .map((country) => {
       return `
-<a href='/Details.html'>
-    <div class="shadow-md hover:shadow-[0_1px_0px_rgb(0,0,0)] ease-out hover:translate-y-1 transform transition duration-500 hover:scale-105 w-full dark:bg-darkModeElements bg-lightModeElements mb-[50px] md:mb-[50px]  rounded-[10px]">
+<a href='Details.html'>
+    <div class="shadow-md hover:shadow-[0_1px_0px_rgb(0,0,0)] ease-out hover:translate-y-1 transform transition duration-500 hover:scale-105 w-full dark:bg-darkModeElements bg-lightModeElements mb-[50px] md:mb-[50px]  rounded-[10px] dark:rounded-[10px]">
                 
     <img src="${country.flags.png}" class='w-full md:h-56 h-full rounded-t-[10px]'/>
     <div class='pt-[20px] pl-[10px] dark:bg-darkModeElements'>
