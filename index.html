@@ -9,23 +9,24 @@
           <link rel="stylesheet" href="https://stackpath.boostrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"> -->
       </head>
-          <body class="font-nunito dark:text-white dark:bg-darkModeBg bg-gray-100">
-            <main class="mx-auto md:max-w-xl dark:dark:bg-darkModeBg">
+          <body class="font-nunito dark:text-white dark:bg-darkModeBg bg-gray-100 ">
+            <main class=" dark:dark:bg-darkModeBg">
 
-              <header class="flex justify-between px-[20px] shadow pt-[20px]  pb-[20px]   dark:bg-darkModeElements bg-white">
+              <!-- Remove max-w-xl from main so as for it to span through all sides for larger screens -->
+              <header class="flex justify-between px-[20px] shadow pt-[20px]  pb-[20px]   dark:bg-darkModeElements bg-lightModeElements">
                 <div class="font-bold text-[16px]">Where in the world?</div>
-                <div class="inline-flex items-center ">
-                  <img src="bx-moon (1).svg" class="moon w-4" alt="moonIcon">
-                    <!-- <svg class="moon cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 ">
+                <div class="inline-flex items-center">
+                  <!-- <img src="bx-moon (1).svg" class="moon w-5" alt="moonIcon dark:text-lightModeElements"> -->
+                    <svg class="moon cursor-pointer w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 ">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
-                    </svg> -->
+                    </svg>
                   </img>
-                    <span class="font-semibold text-[15px] pl-[2.3px]">Dark Mode</span>
+                    <span class="font-semibold text-[15px] pl-[3px]">Dark Mode</span>
                 
                 </div>
               </header>
 
-              <div class="md:flex md:justify-between px-[20px]  mt-[50px]">
+              <div class="lg:flex md:flex md:justify-between lg:justify-between px-[20px]  mt-[50px]">
                 <div class="inline-flex items-center h-[60px] bg-white md:w-[450px] w-[330px] shadow rounded pl-[15px] md:mb-0 mb-[20px] dark:bg-darkModeElements">
                   <img src="search-outline.svg" alt="searchIcon" class="w-5 h-5 ">
                   <!-- <ion-icon name="search-outline"></ion-icon> -->
@@ -43,8 +44,8 @@
                   </select> -->
                   <div id="dropdownDefault" data-dropdown-toggle="dropdown" class="dark:text-white dark:hover:bg-slate-500 hover:bg-gray-100 focus:ring-4 focus:ring-gray-500 bg-white dark:bg-darkModeElements rounded hover:cursor-pointer  py-[8px] shadow text-center inline-flex items-center px-[40px]" type="button"><span class="option-text">Filter by Region</span> <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                   </div>
-                  <div id="dropdown" class="hidden z-10 w-[220px] bg-white rounded divide-y divide-gray-100 shadow-2xl dark:bg-slate-700">
-                    <ul class="py-1" aria-labelledby="dropdownDefault" id="options">
+                  <div id="dropdown" class="hidden dropdown z-10 w-[220px] bg-white rounded divide-y divide-gray-100 shadow-2xl dark:bg-slate-700">
+                    <ul class="py-1" aria-labelledby="dropdownDefault" id="options" name="">
                       
                       <li class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-500 option"><span class="option-text">Africa</span></li>
                       <li class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-grayishBlue dark:hover:bg-gray-500 option"><span class="option-text">America</span></li>
@@ -56,7 +57,7 @@
                   </div>
 
                 </div>
-                <section id="section" class="md:grid md:grid-cols-4 md:gap-8 px-[20px] mt-[50px] "></section>
+                <section id="section" class="grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 md:gap-8 px-[20px] mt-[50px] "></section>
 
                 <!-- <div id="section" class="md:grid md:grid-cols-4 md:gap-8 px-[40px] mt-[50px] dark:transition duration-500"></div> -->
               </main>

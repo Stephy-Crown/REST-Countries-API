@@ -1,24 +1,48 @@
 const countriesCountainer = document.getElementById("section");
 
+const dropDown = document.getElementsByClassName("dropdown");
+// oneCountry.addEventListener("click");
+
 const searchBar = document.getElementById("search");
 
 let resArrayoFCountriesObjs = [];
+console.log(resArrayoFCountriesObjs);
 
+// This is the classname for the <li> list items
+// Queryselectorall is like putting all list items, grabboing them and putting them in an array
 const options = document.querySelectorAll(".option");
+
+// this is the class name for each span for the names of countries
 const selectText = document.querySelector(".option-text");
 
 options.forEach((option) => {
+  // OPTION passed in the call back fn is each item in the array of OPTIONS
+  // this hows each item which of the List,looping through each one::::At ecah iteration through EACH list item,it will execute this call back fn
   console.log(option);
 
   option.addEventListener("click", () => {
+    // Grab the EACH li item and grab the span and the innerText and store in a variable
     let selectedOption = option.querySelector(".option-text").innerText;
+    // (selectedOption::this is the span)
+    console.log(option.querySelector(".option-text"));
+    // (selectedOption::this is the span).innerText==>grabbing the text in the span
+    console.log(option.querySelector(".option-text").innerText);
+    // change the innertext of each span name to the selected
 
-    console.log(selectedOption);
+    // we are then setting the 'text' inside option-text to the selected option we CLICK upon
     selectText.innerText = selectedOption;
 
+    // console.log(selectText.innerText);
+    console.log(selectedOption);
+
+    // dropDown.style.display = "none";
+    // options.style.opacity = 0
+
     const filteredRegion = resArrayoFCountriesObjs.filter((country) => {
+      console.log(country.region.includes(selectedOption));
       return country.region.includes(selectedOption);
     });
+
     console.log(filteredRegion);
     showCountries(filteredRegion);
   });
@@ -65,7 +89,8 @@ const showCountries = (countries) => {
   let htmlString = countries
     .map((country) => {
       return `
-    <div class="shadow-lg dark:bg-darkModeElements mb-[50px] md:mb-[50px]  rounded-[10px]">
+<a href='/Details.html'>
+    <div class="shadow-md hover:shadow-[0_1px_0px_rgb(0,0,0)] ease-out hover:translate-y-1 transform transition duration-500 hover:scale-105 w-full dark:bg-darkModeElements bg-lightModeElements mb-[50px] md:mb-[50px]  rounded-[10px]">
                 
     <img src="${country.flags.png}" class='w-full md:h-56 h-full rounded-t-[10px]'/>
     <div class='pt-[20px] pl-[10px] dark:bg-darkModeElements'>
@@ -82,6 +107,7 @@ const showCountries = (countries) => {
       </p>
 </div>
   </div>
+  </a>
     `;
     })
     .join("");
